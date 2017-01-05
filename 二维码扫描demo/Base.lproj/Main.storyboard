@@ -1,13 +1,14 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Y0V-j5-DfD">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,89 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入(默认不输入就www.baidu.com)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="82A-kG-5zj">
+                                <rect key="frame" x="170" y="134" width="259.5" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cfn-Ir-3jv">
+                                <rect key="frame" x="262.5" y="194" width="75" height="30"/>
+                                <state key="normal" title="生成二维码">
+                                    <color key="titleColor" red="1" green="0.29378660480000002" blue="0.14175273790000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="generateButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iTc-dV-U4O"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OBp-RU-3Kc">
+                                <rect key="frame" x="262.5" y="254" width="75" height="30"/>
+                                <state key="normal" title="识别二维码">
+                                    <color key="titleColor" red="0.20570801115504078" green="0.91613526342203722" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="identifyButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rzg-Dr-hhq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C0d-C8-sqr">
+                                <rect key="frame" x="262.5" y="314" width="75" height="30"/>
+                                <state key="normal" title="扫描二维码">
+                                    <color key="titleColor" red="1" green="0.25745211626286468" blue="0.76407758625732536" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="scanButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UMn-HD-BJd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Nw-bH-itX">
+                                <rect key="frame" x="255" y="374" width="90" height="30"/>
+                                <state key="normal" title="封装二维码库">
+                                    <color key="titleColor" red="0.58216395217167438" green="0.14759606008530401" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="encapsulationLibButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4Oa-io-Bm1"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="C0d-C8-sqr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="41f-yU-1TM"/>
+                            <constraint firstItem="82A-kG-5zj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="J4g-yF-er9"/>
+                            <constraint firstItem="C0d-C8-sqr" firstAttribute="top" secondItem="OBp-RU-3Kc" secondAttribute="bottom" constant="30" id="MS3-fD-hyz"/>
+                            <constraint firstItem="82A-kG-5zj" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="70" id="OQk-z0-Lrh"/>
+                            <constraint firstItem="cfn-Ir-3jv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cvQ-Is-zQb"/>
+                            <constraint firstItem="0Nw-bH-itX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eWq-05-91r"/>
+                            <constraint firstItem="OBp-RU-3Kc" firstAttribute="top" secondItem="cfn-Ir-3jv" secondAttribute="bottom" constant="30" id="flt-tU-ZJj"/>
+                            <constraint firstItem="0Nw-bH-itX" firstAttribute="top" secondItem="C0d-C8-sqr" secondAttribute="bottom" constant="30" id="hdm-EC-Spo"/>
+                            <constraint firstItem="cfn-Ir-3jv" firstAttribute="top" secondItem="82A-kG-5zj" secondAttribute="bottom" constant="30" id="nVj-11-GBZ"/>
+                            <constraint firstItem="OBp-RU-3Kc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rTY-JA-CrQ"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="2tD-ZP-cVQ"/>
+                    <connections>
+                        <outlet property="inputTextString" destination="82A-kG-5zj" id="fXX-fG-Dya"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1032" y="339"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="xis-wq-D9J">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Y0V-j5-DfD" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="SEZ-rc-3oB">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="jJQ-9m-Yi2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WtT-RD-Pzp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="220" y="339"/>
         </scene>
     </scenes>
 </document>

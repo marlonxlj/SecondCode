@@ -15,6 +15,10 @@
 		1717DC851E1B4D06007FA90D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1717DC831E1B4D06007FA90D /* LaunchScreen.storyboard */; };
 		1717DC901E1B4D06007FA90D /* _____demoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1717DC8F1E1B4D06007FA90D /* _____demoTests.m */; };
 		1717DC9B1E1B4D06007FA90D /* _____demoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1717DC9A1E1B4D06007FA90D /* _____demoUITests.m */; };
+		1717DCB11E1B7FFA007FA90D /* XLJGenerateQRCodeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1717DCB01E1B7FFA007FA90D /* XLJGenerateQRCodeController.m */; };
+		1720DFD91E1E3769004CB7EC /* XLJwebVController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1720DFD81E1E3769004CB7EC /* XLJwebVController.m */; };
+		17ED7C031E1C975F00FC0259 /* XLJScanController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17ED7C021E1C975F00FC0259 /* XLJScanController.m */; };
+		17ED7C061E1CD75300FC0259 /* XLJScanQRCController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17ED7C051E1CD75300FC0259 /* XLJScanQRCController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +55,14 @@
 		1717DC961E1B4D06007FA90D /* 二维码扫描demoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "二维码扫描demoUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1717DC9A1E1B4D06007FA90D /* _____demoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "_____demoUITests.m"; sourceTree = "<group>"; };
 		1717DC9C1E1B4D06007FA90D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1717DCAF1E1B7FFA007FA90D /* XLJGenerateQRCodeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLJGenerateQRCodeController.h; sourceTree = "<group>"; };
+		1717DCB01E1B7FFA007FA90D /* XLJGenerateQRCodeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLJGenerateQRCodeController.m; sourceTree = "<group>"; };
+		1720DFD71E1E3769004CB7EC /* XLJwebVController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLJwebVController.h; sourceTree = "<group>"; };
+		1720DFD81E1E3769004CB7EC /* XLJwebVController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLJwebVController.m; sourceTree = "<group>"; };
+		17ED7C011E1C975F00FC0259 /* XLJScanController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLJScanController.h; sourceTree = "<group>"; };
+		17ED7C021E1C975F00FC0259 /* XLJScanController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLJScanController.m; sourceTree = "<group>"; };
+		17ED7C041E1CD75300FC0259 /* XLJScanQRCController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLJScanQRCController.h; sourceTree = "<group>"; };
+		17ED7C051E1CD75300FC0259 /* XLJScanQRCController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLJScanQRCController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +113,7 @@
 		1717DC741E1B4D06007FA90D /* 二维码扫描demo */ = {
 			isa = PBXGroup;
 			children = (
+				1717DCAE1E1B7FDD007FA90D /* Classes */,
 				1717DC781E1B4D06007FA90D /* AppDelegate.h */,
 				1717DC791E1B4D06007FA90D /* AppDelegate.m */,
 				1717DC7B1E1B4D06007FA90D /* ViewController.h */,
@@ -138,6 +151,21 @@
 				1717DC9C1E1B4D06007FA90D /* Info.plist */,
 			);
 			path = "二维码扫描demoUITests";
+			sourceTree = "<group>";
+		};
+		1717DCAE1E1B7FDD007FA90D /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				1717DCAF1E1B7FFA007FA90D /* XLJGenerateQRCodeController.h */,
+				1717DCB01E1B7FFA007FA90D /* XLJGenerateQRCodeController.m */,
+				17ED7C011E1C975F00FC0259 /* XLJScanController.h */,
+				17ED7C021E1C975F00FC0259 /* XLJScanController.m */,
+				17ED7C041E1CD75300FC0259 /* XLJScanQRCController.h */,
+				17ED7C051E1CD75300FC0259 /* XLJScanQRCController.m */,
+				1720DFD71E1E3769004CB7EC /* XLJwebVController.h */,
+				1720DFD81E1E3769004CB7EC /* XLJwebVController.m */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,6 +230,7 @@
 		1717DC6A1E1B4D06007FA90D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = XLJ;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = XLJ;
 				TargetAttributes = {
@@ -272,8 +301,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				1717DC7D1E1B4D06007FA90D /* ViewController.m in Sources */,
+				1720DFD91E1E3769004CB7EC /* XLJwebVController.m in Sources */,
 				1717DC7A1E1B4D06007FA90D /* AppDelegate.m in Sources */,
+				17ED7C061E1CD75300FC0259 /* XLJScanQRCController.m in Sources */,
 				1717DC771E1B4D06007FA90D /* main.m in Sources */,
+				17ED7C031E1C975F00FC0259 /* XLJScanController.m in Sources */,
+				1717DCB11E1B7FFA007FA90D /* XLJGenerateQRCodeController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -499,6 +532,7 @@
 				1717DCA11E1B4D06007FA90D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1717DCA21E1B4D06007FA90D /* Build configuration list for PBXNativeTarget "二维码扫描demoTests" */ = {
 			isa = XCConfigurationList;
@@ -507,6 +541,7 @@
 				1717DCA41E1B4D06007FA90D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1717DCA51E1B4D06007FA90D /* Build configuration list for PBXNativeTarget "二维码扫描demoUITests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +550,7 @@
 				1717DCA71E1B4D06007FA90D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
