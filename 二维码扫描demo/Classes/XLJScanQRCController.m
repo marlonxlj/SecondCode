@@ -226,10 +226,10 @@
     //4.添加绘图图层到预栏图层上面
     [self.previerLayer addSublayer:self.drawLayer];
     
-    //6.开始扫描
+    //5.开始扫描
     [self.captureSeesion startRunning];
     
-    //7.停止扫描的方法
+    //6.停止扫描的方法
 //    [self.captureSeesion stopRunning];
     
     [_timer setFireDate:[NSDate distantPast]];

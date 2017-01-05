@@ -60,6 +60,69 @@ Jan  3 16:35:22  二维码扫描demo[4032] <Error>: CGContextRestoreGState: inva
 ```
  
 ###2.扫描二维码
+####效果图:
 
+> 1. 创建上下文
+> 2. 创建一个探测器
+> 3. 直接开始识别图片，获取图片特征
+> `` CIImage *imageCI = [[CIImage alloc] initWithImage:self.sourceImage];
+    NSArray <CIFeature *> *features = [detector featuresInImage:imageCI];``
+    
+> 
+
+    NSMutableArray *resultArray = @[].mutableCopy;
+    
+    for (CIFeature *feature in features) {
+        
+        CIQRCodeFeature *tempFeature = (CIQRCodeFeature *)feature;
+        [resultArray addObject:tempFeature.messageString];
+        //获取到二维码的东西
+        self.urlString = tempFeature.messageString;
+        
+        if (isDrawCodeFrame) {
+            tempImage = [self drawQRCodeFrameFeatre: tempFeature toImage: tempImage];
+        }
+    }
+
+> ######4. 读取特征
 
 ###3.生成二维码
+####效果图:
+
+> 1. 判断输入输出能否加入当前会话
+
+ > - 添加一个视频预览图层
+> 2. 设置输出数据媒体类型
+> 3. 添加预栏图层，放在最底层
+> 4. 添加绘图图层到预栏图层上面
+> 5. 开始扫描
+
+> #####代理
+> ```
+> #pragma mark - AVCaptureMetadataOutputObjectsDelegate代理
+//得到扫描结果
+- (void)captureOutput:(AVCaptureOutput *)captureOutput didOutputMetadataObjects:(NSArray *)metadataObjects fromConnection:(AVCaptureConnection *)connection
+{
+    //1.移除之前的边框
+    [self removeQRCodeFrame];
+    if (metadataObjects == nil || metadataObjects.count == 0) {
+        NSLog(@"未能识别");
+    }
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[metadataObjects.lastObject stringValue]]];  
+    for (AVMetadataObject *obj in metadataObjects) {
+        //转换成机器可读的编码数据
+        AVMetadataMachineReadableCodeObject *codeObj = (AVMetadataMachineReadableCodeObject *)[self.previerLayer transformedMetadataObjectForMetadataObject:obj];    
+        //绘制二维码边框
+        [self drawQRBorderShape:codeObj];
+    }
+}
+
+> ```
+
+####封装的还没有做好，做好了之后再更新。
+####🐼🐶🐶如果对你有帮助，或觉得可以。请右上角star一下，这是对我一种鼓励，让我知道我写的东西有人认可，我才会后续不断的进行完善。
+
+###有任何问题或建议请及时issues me，以便我能更快的进行更新修复。
+
+####Email: marlonxlj@163.com
+

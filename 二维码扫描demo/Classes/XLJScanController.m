@@ -104,6 +104,7 @@
     }];
 }
 
+//识别二维码
 - (void)detectorQRCodeImageWithSourceImage:(UIImage *)sourceImage isDrawCodeFrame:(BOOL)isDrawCodeFrame completeBlock:(void(^)(NSArray *resultArray, UIImage *resultImage))completeBlock
 {
     
