@@ -6,7 +6,7 @@
 生活中有很多的地方都在使用，比如把它分享给朋友，通过扫描来关注平台。它的功能有生成二维码、扫描二维码、从相册中读取二维码。主要从这几个方面来讲二维码的使用，最后会封装一个方便快捷使用的库，供想快速集成的使用者。
 
 ###1.生成二维码
-####![效果图](https://github.com/marlonxlj/SecondCode/blob/master/1.gif):
+####![Alt Text](https://github.com/marlonxlj/SecondCode/blob/master/1.gif):
 
 > #####1. 创建二维码滤镜--CIFilter
 > #####1.1 恢复滤镜的默认属性
@@ -60,7 +60,7 @@ Jan  3 16:35:22  二维码扫描demo[4032] <Error>: CGContextRestoreGState: inva
 ```
  
 ###2.扫描二维码
-####![效果图](https://github.com/marlonxlj/SecondCode/blob/master/2.gif):
+####![Alt Text](https://github.com/marlonxlj/SecondCode/blob/master/2.gif):
 
 > 1. 创建上下文
 > 2. 创建一个探测器
@@ -87,7 +87,7 @@ Jan  3 16:35:22  二维码扫描demo[4032] <Error>: CGContextRestoreGState: inva
 > ######4. 读取特征
 
 ###3.生成二维码
-####![效果图](https://github.com/marlonxlj/SecondCode/blob/master/3.gif):
+####![Alt Text](https://github.com/marlonxlj/SecondCode/blob/master/3.gif):
 
 > 1. 判断输入输出能否加入当前会话
 
